@@ -1,8 +1,10 @@
 #!/bin/bash
 echo "entrer l'emplacement:" 
-read -p destination
+read destination
 cd "$destination"
+if [ ! -f "$destination" ]; then
 mkdir mon_dossier
+fi
 cd mon_dossier
 if [ ! -f collection.txt ]; then
 touch collection.txt

@@ -3,9 +3,9 @@ echo "entrer l'emplacement:"
 read destination
 cd "$destination"
 if [ ! -f "$destination" ]; then
-mkdir mon_dossier
+mkdir "$destination"
 fi
-cd mon_dossier
+cd "$destination"
 if [ ! -f collection.txt ]; then
 touch collection.txt
 fi
